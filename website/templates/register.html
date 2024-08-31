@@ -1,4 +1,15 @@
 {% extends 'base.html' %}
     {% block content %}
-    <h1>Register Page</h1>
+    <div class="col-md-6 offset-md-3">
+        <h1>Register</h1>
+        <br/><br/>
+        <form method="POST" action="">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <br/>
+            <div style="width: 100%; max-width: 400px;">
+                <button type="submit" style="display: block; width: 100%; padding: 0.5rem 1rem; font-size: 1rem; background-color: #6c757d; color: white; border: none; border-radius: 0.25rem;">Register</button>
+            </div>            
+        </form>
+    </div>
     {% endblock %}
